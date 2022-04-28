@@ -1,8 +1,9 @@
+import Header from "./components/Navbar/Navbar.js";
+
 function App() {
   return (
     <div className="App">
-      <h1>Esta es mi primer aplicación en ReactJS</h1>
-      <p>hola mundo</p>
+      <Header />
     </div>
   );
 }
