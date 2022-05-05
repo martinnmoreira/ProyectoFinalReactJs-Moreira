@@ -28,3 +28,7 @@ h1 {
 .links li a {
     text-decoration: none;
 }
+
+.listaProductos {
+    list-style: none;
+}

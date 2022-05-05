@@ -1,7 +1,8 @@
 import {Navbar, Nav, Container} from "react-bootstrap"
-import FiShoppingCart from "../Cardicon/CardIcon"
+import CardIcon from "../Cardicon/CardIcon"
 
 export default function Header() {
+    const count = 4
     return(
         <Navbar bg="light" variant="light" className="container">
             <Container>
@@ -12,10 +13,9 @@ export default function Header() {
                     <Nav.Link href="#nosotros">Nosotros</Nav.Link>
                     <Nav.Link href="#contacto">Contacto</Nav.Link>
                 </Nav>
-                
             </Container>
-            <FiShoppingCart />
-                
+            <CardIcon />
+            <span className="btn btn-light">{count}</span>    
         </Navbar>
         
     );
