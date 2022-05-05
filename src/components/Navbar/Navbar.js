@@ -1,7 +1,9 @@
 import {Navbar, Nav, Container} from "react-bootstrap"
+import FiShoppingCart from "../Cardicon/CardIcon"
+
 export default function Header() {
     return(
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="light" variant="light" className="container">
             <Container>
                 <Navbar.Brand href="#inicio">TodoLibrería</Navbar.Brand>
                 <Nav className="me-auto">
@@ -10,7 +12,11 @@ export default function Header() {
                     <Nav.Link href="#nosotros">Nosotros</Nav.Link>
                     <Nav.Link href="#contacto">Contacto</Nav.Link>
                 </Nav>
+                
             </Container>
+            <FiShoppingCart />
+                
         </Navbar>
+        
     );
 }
