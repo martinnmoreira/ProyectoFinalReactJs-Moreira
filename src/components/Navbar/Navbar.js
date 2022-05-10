@@ -4,7 +4,7 @@ import CardIcon from "../Cardicon/CardIcon"
 export default function Header() {
     const count = 4
     return(
-        <Navbar bg="light" variant="light" className="container">
+        <Navbar bg="light" variant="light" className="container-fluid">
             <Container>
                 <Navbar.Brand href="#inicio">TodoLibrería</Navbar.Brand>
                 <Nav className="me-auto">

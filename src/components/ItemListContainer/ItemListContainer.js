@@ -1,20 +1,13 @@
-import React from "react";
+import ItemCount from "../ItemCount/ItemCount";
+import { products } from "../../data/Products/Products";
 
-export default class Footer extends React.Component {
-    render() {
-        console.log(this.props);
-        return (
-            <footer>
-                <div>
-                    <ul className="listaProductos">
-                        <li>{this.props.greeting1}</li>
-                        <li>{this.props.greeting2}</li>
-                        <li>{this.props.greeting3}</li>
-                        <li>{this.props.greeting4}</li>
-                        <li>{this.props.greeting5}</li>
-                    </ul>
-                </div>
-            </footer>
+export default function ItemListContainer() {
+    return (
+            <div>
+                {products.map((product, index) => (
+                <ItemCount product={product} key={product.id}/>
+                )
+            )}
+            </div>
         );
-    }
-}
+  }

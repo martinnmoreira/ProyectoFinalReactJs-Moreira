@@ -1,14 +1,11 @@
-import React from "react";
+import React from 'react'
 
-export default class Footer extends React.Component {
-    render() {
-        console.log(this.props);
-        return (
-            <footer>
-                <div>
-                    <p>Futuro Footer {this.props.greeting} {this.props.greeting2} {this.props.greeting3}</p>
-                </div>
-            </footer>
-        );
-    }
+const Footer = ({greeting1, greeting2, greeting3}) => {
+  return (
+    <div>
+        <p>Futuro Footer {greeting1} {greeting2} {greeting3}</p>
+    </div>
+  )
 }
+
+export default Footer

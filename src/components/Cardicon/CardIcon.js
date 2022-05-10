@@ -1,8 +1,10 @@
 import { FiShoppingCart } from "react-icons/fi";
-import React from 'react';
+import React from 'react'
 
-export default class CardIcon extends React.Component {
-  render() {
-    return <FiShoppingCart/>
-  }
+const CardIcon = () => {
+  return (
+    <div><FiShoppingCart/></div>
+  )
 }
+
+export default CardIcon

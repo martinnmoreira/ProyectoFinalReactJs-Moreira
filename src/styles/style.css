@@ -32,3 +32,9 @@ h1 {
 .listaProductos {
     list-style: none;
 }
+
+.cardsProductos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
