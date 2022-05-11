@@ -2,23 +2,8 @@ import Header from "./components/Navbar/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import Footer from "./components/Footer/Footer"
 import { Container } from "react-bootstrap";
-import {products} from "./data/Products/Products";
-import ItemCount from "./components/ItemCount/ItemCount";
-
-
 
 function App() {
-  const taskProducts = new Promise((resolve, reject) => {
-    setTimeout(()=>{
-      resolve(products)
-    }, 2000)
-  })
-
-  taskProducts.then((res) => {
-    console.log("The promise has run successfully")
-  }).catch((err) => {
-    console.log(("An error ocurred running the promise"))
-  })
 
   return (
     <>

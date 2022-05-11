@@ -32,3 +32,15 @@ export const products = [
       description: "Boligrafo Parker Jotter Acero Inox Clip Dorado Personalizado."
     },
   ]
+
+  export const promesa = new Promise ((resolve, reject) =>{
+    let pedido = true
+    setTimeout(() =>{
+      if (pedido){
+        resolve(products)
+      }
+      else {
+        reject('Ha ocurrido un error en el pedido')
+      }
+      }, 3000)
+    })
