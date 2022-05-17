@@ -42,5 +42,5 @@ export const products = [
       else {
         reject('Ha ocurrido un error en el pedido')
       }
-      }, 3000)
+      }, 2000)
     })

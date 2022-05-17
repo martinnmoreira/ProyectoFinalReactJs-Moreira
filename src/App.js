@@ -1,7 +1,8 @@
 import Header from "./components/Navbar/Navbar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
+//import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import Footer from "./components/Footer/Footer"
 import { Container } from "react-bootstrap";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
       <Header />
       <main className="main-content container">
-        <ItemListContainer />
+        {/* <ItemListContainer /> */}
+        <ItemDetailContainer />
       </main >
       <footer className="container-fluid">
         <Container className="btn btn-light">
