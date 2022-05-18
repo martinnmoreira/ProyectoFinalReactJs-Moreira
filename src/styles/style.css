@@ -33,10 +33,35 @@ h1 {
     list-style: none;
 }
 
+.tituloCentrado {
+    text-align: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
 .cardsProductos {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+}
+
+.cardProductoDetalle {
+    text-align: center;
+    border: 1px solid gray;
+    width: 50rem;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.btn {
+    margin: 10px;
 }
 
 .tarjetasLapiceras {
@@ -44,4 +69,14 @@ h1 {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+}
+
+
+.card-imgs {
+    height: 500px;
+    
+}
+
+.cardLapiceras {
+    margin: 10px;
 }
