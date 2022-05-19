@@ -4,7 +4,7 @@ export const products = [
       title: "Lapices Simball x 12",
       stock: 20,
       price: 750,
-      image: "img/lapiz_simball.jpg",
+      image: "/img/lapiz_simball.jpg",
       description: "Lápices de colores Simball x 12 unidades.",
       category: "lapices"
     },
@@ -13,7 +13,7 @@ export const products = [
       title: "Lapices Faber-Castell",
       stock: 18,
       price: 3560,
-      image: "img/lapiz_castell.jpg",
+      image: "/img/lapiz_castell.jpg",
       description: "Lápices de colores Faber-Castell x 12 unidades. Más 3 bicolor gratis.",
       category: "lapices"
     },
@@ -22,7 +22,7 @@ export const products = [
       title: "Lapicera Parker",
       stock: 10,
       price: 2899,
-      image: "img/lapicera_parker.jpg",
+      image: "/img/lapicera_parker.jpg",
       description: "Boligrafo Parker Jotter Originals.",
       category: "lapiceras"
     },
@@ -31,7 +31,7 @@ export const products = [
       title: "Lapicera Parker Jotter Dorada",
       stock: 8,
       price: 3500,
-      image: "img/lapicera_parker_jotter_inox.jpg",
+      image: "/img/lapicera_parker_jotter_inox.jpg",
       description: "Boligrafo Parker Jotter Acero Inox Clip Dorado Personalizado.",
       category: "lapiceras"
     }

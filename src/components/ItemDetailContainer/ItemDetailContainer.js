@@ -11,12 +11,10 @@ export default function ItemDetailContainer() {
     useEffect(() => {
         setLoading(true)
         promesa
-        //.then((res) => (res.json()))
-        //.then((data) => setLapiceras(data.results))
         .then((res) => setProductDetail(res.find((product) => product.id === id)))
-        //.then((data) => console.log(data.results))
         .catch((error) => console.log(error))
         .finally(()=>setLoading(false))
+        // eslint-disable-next-line
     },[])
     
     return (

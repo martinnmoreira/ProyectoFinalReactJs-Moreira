@@ -7,8 +7,7 @@ const ItemLapicera = ({lapicera}) => {
             <Card className="cardLapiceras" style={{ width: '18rem' }}>
             <Card.Img className="card-imgs" variant="top" src={lapicera.thumbnail} />
             <Card.Body>
-                <Card.Title>{lapicera.title}<hr></hr></Card.Title>
-                
+                <Card.Title>{lapicera.title}<hr></hr></Card.Title>  
                 <Card.Text>
                 Precio: ${lapicera.price}
                 </Card.Text>

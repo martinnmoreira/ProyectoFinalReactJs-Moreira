@@ -10,7 +10,6 @@ export default function FetchContainer() {
         fetch('https://api.mercadolibre.com/sites/MLA/search?q=lapiceras')
         .then((res) => (res.json()))
         .then((data) => setLapiceras(data.results))
-        //.then((data) => console.log(data.results))
         .catch((error) => console.log(error))
         .finally(()=>setLoading(false))
     },[])
@@ -20,4 +19,4 @@ export default function FetchContainer() {
                 {loading ? <h3>Loading...</h3> : <FetchDetail lapiceras={lapiceras}/>}
             </div>
         );
-  }
+}
