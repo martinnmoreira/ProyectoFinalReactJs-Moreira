@@ -22,7 +22,6 @@ export default function NavBar() {
         </Navbar.Collapse>
       </Container>
       <CartIcon />
-      <span className="btn btn-light">{count}</span>    
       </Navbar>
     );
 }
