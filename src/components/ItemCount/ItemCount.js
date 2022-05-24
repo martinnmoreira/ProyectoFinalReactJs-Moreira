@@ -1,7 +1,5 @@
 import React from "react"
-import { toast } from "react-toastify"
 import { Button } from "react-bootstrap"
-import {CartContext} from "../../context/CartContext"
 /* --------------- Declaracion de nuestro functional component -------------- */
 export default function AddButton({count, setCount, stock, onSubmit}) {
 
