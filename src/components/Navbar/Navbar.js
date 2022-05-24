@@ -1,5 +1,5 @@
 import {Navbar, Nav, Container, NavDropdown} from "react-bootstrap"
-import CardIcon from "../Cardicon/CardIcon"
+import CartIcon from "../CartIcon/CartIcon"
 
 export default function NavBar() {
     const count = 4
@@ -21,7 +21,7 @@ export default function NavBar() {
           </Nav>
         </Navbar.Collapse>
       </Container>
-      <CardIcon />
+      <CartIcon />
       <span className="btn btn-light">{count}</span>    
       </Navbar>
     );
