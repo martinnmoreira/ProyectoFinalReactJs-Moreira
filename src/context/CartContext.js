@@ -47,7 +47,7 @@ const CartProvider = ({children}) => {
     }
     // isInCart
     const isInCart = (id) => {
-        return cart.find(item => item.id === id)
+        return cart.find(productDetail => productDetail.id === id)
     }
 
 
