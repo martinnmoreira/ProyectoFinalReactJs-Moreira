@@ -10,7 +10,7 @@ const CartIcon = () => {
   return (
     <div className="CartIcon">
       <div><FiShoppingCart /></div>
-      <span className="badge badge-pill badge-danger">
+      <span className="badgeCountIcon">
         {cart.length}
       </span>
 
