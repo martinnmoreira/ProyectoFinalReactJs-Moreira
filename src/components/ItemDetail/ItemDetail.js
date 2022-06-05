@@ -1,7 +1,8 @@
 import React from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount';
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../Context/CartContext";
+
 
 export default function ItemDetail({productDetail}) {
   const {id, title, description, image, stock, price} = productDetail
@@ -19,17 +20,19 @@ export default function ItemDetail({productDetail}) {
         <p>{description}</p>
         <p>Stock: {stock}</p>
         <p>Precio: ${price}</p>
-        {/* <div className='card-stock'><ItemCount stock={stock}/></div> */}
-        {isInCart({id}) ? (
-          <button>Ir al carrito</button>
-        ) : (
-          <ItemCount
-            onSubmit={() => addToCart(productDetail, count)}
-            count={count}
-            setCount={setCount}
-            stock={stock}
-          />
-        )}
+        {isInCart(id) ? (
+                        <Link to='/Cart'><button className="btn btn-warning">Ir al carrito</button></Link>
+                    ) : (
+                    <div>
+                        <ItemCount 
+                            onSubmit={()=> addToCart(productDetail, count)}
+                            count={count}
+                            setCount={setCount}
+                            stock={stock}
+                        />
+                    </div>
+                    )
+        }
         <button className='btn btn-info' onClick={() =>volver('/productos')}>Volver a Productos</button>
       </div>
     </>

@@ -6,8 +6,8 @@ import FetchContainer from "./components/FetchContainer/FetchContainer"
 import Footer from "./components/Footer/Footer"
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
-import Cart from './pages/Cart';
-import { CartProvider } from "./context/CartContext";
+import Cart from './components/Cart/Cart';
+import { CartProvider } from "./Context/CartContext";
 
 function App() {
 

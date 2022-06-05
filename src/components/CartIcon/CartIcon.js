@@ -1,20 +1,26 @@
 import { FiShoppingCart } from "react-icons/fi";
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 // Importo context para acceder al carrito
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../Context/CartContext";
 
 const CartIcon = () => {
   const { cart } = React.useContext(CartContext)
-  return (
-    <div className="CartIcon">
-      <div><FiShoppingCart /></div>
-      <span className="badgeCountIcon">
-        {cart.length}
-      </span>
+  const getTotalQuantity = (items) => items
+  .map((item) => item.quantity)
+  .reduce((acc, value) => acc + value, 0)  
+  const cantidad = getTotalQuantity(cart); 
 
-    </div>
+  return (
+    <Link to='/Cart'>
+      <div className="CartIcon">
+        <div><FiShoppingCart /></div>
+        <span className="badgeCountIcon">
+          {cantidad}
+        </span>
+      </div>
+    </ Link>
   )
 }
 

@@ -2,7 +2,6 @@ import {Navbar, Nav, Container, NavDropdown} from "react-bootstrap"
 import CartIcon from "../CartIcon/CartIcon"
 
 export default function NavBar() {
-    const count = 4
     return(
       <Navbar bg="light" variant="light" className="container-fluid">
       <Container>
