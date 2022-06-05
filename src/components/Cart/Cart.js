@@ -23,7 +23,7 @@ export default function Cart() {
                         <div className="fw-bold">{element.title}</div>
                         Precio {element.price}<br />
                         <h6>Subtotal: {subtotal}</h6>
-                        <Badge bg="primary" pill>BOTON PARA REMOVER ITEM</Badge>  
+                        <button className='btn btn-danger'>BOTON PARA REMOVER ITEM</button> 
                         </div>
                         <Badge bg="primary" pill>
                         Cantidad: {element.quantity}
