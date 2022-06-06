@@ -12,16 +12,31 @@ const CartIcon = () => {
   .reduce((acc, value) => acc + value, 0)  
   const cantidad = getTotalQuantity(cart); 
 
-  return (
-    <Link to='/Cart'>
-      <div className="CartIcon">
-        <div><FiShoppingCart /></div>
-        <span className="badgeCountIcon">
-          {cantidad}
-        </span>
+  // return (
+  //   <div>{(cantidad == 0) ? <div style={{display: "none"}}></div> :
+  //     <Link to='/Cart'>
+  //       <div className="CartIcon">
+  //         <div><FiShoppingCart /></div>
+  //         <span className="badgeCountIcon">
+  //           {cantidad}
+  //         </span>
+  //       </div>}
+  //     </ Link>
+  //   )
+
+    return (
+      <div>{(cantidad === 0) ? <div style={{display: "none"}}></div> :
+            <Link to='/Cart'>
+              <div className="CartIcon">
+                <div><FiShoppingCart /></div>
+                <span className="badgeCountIcon">
+                    {cantidad}
+                </span>
+              </div>
+            </ Link>}
       </div>
-    </ Link>
-  )
+);
 }
+
 
 export default CartIcon
