@@ -1,22 +1,23 @@
 import {Navbar, Nav, Container, NavDropdown} from "react-bootstrap"
+import { NavLink } from "react-router-dom";
 import CartIcon from "../CartIcon/CartIcon"
 
 export default function NavBar() {
     return(
       <Navbar bg="light" variant="light" className="container-fluid">
       <Container>
-        <Navbar.Brand href="/">TodoLibrería</Navbar.Brand>
+        <NavLink to="/">TodoLibrería</NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Inicio</Nav.Link>
-            <Nav.Link href="/fetch">Fetch</Nav.Link>
+            <NavLink to="/">Inicio</NavLink>
+            <NavLink to="/fetch">Fetch</NavLink>
             <NavDropdown title="Productos" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/productos">Todos los productos</NavDropdown.Item>
-              <NavDropdown.Item href="/categoria/lapices">Lapices</NavDropdown.Item>
-              <NavDropdown.Item href="/categoria/lapiceras">Lapiceras</NavDropdown.Item>        
+              <NavLink to="/productos">Todos los productos</NavLink>
+              <NavLink to="/categoria/lapices">Lapices</NavLink>
+              <NavLink to="/categoria/lapiceras">Lapiceras</NavLink>        
             </NavDropdown>
-            <Nav.Link href="/contacto">Contacto</Nav.Link>
+            <NavLink to="/contacto">Contacto</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

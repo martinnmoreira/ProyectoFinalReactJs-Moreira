@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
 import { ListGroup, Badge, Card } from "react-bootstrap";
 import {useNavigate} from 'react-router-dom'
+import { FiTrash2 } from "react-icons/fi";
 
 export default function Cart() {
     const { cart, deleteAll, removeFromCart } = useContext(CartContext)
@@ -24,45 +25,35 @@ export default function Cart() {
                         Precio {element.price}<br />
                         <h6>Subtotal: {subtotal}</h6>
                         {/* <button className='btn btn-danger'>BOTON PARA REMOVER ITEM</button>  */}
-                        <button className='btn btn-info' onClick={()=> removeFromCart()}>BOTON PARA REMOVER ITEM</button>
+                        
                         </div>
                         <Badge bg="primary" pill>
-                        Cantidad: {element.quantity}
-                        </Badge>                        
+                            Cantidad: {element.quantity}
+                        </Badge>
+                        <FiTrash2 className="trashIcon" onClick={()=> removeFromCart(element.id)}/>                      
                     </ListGroup.Item> 
                 </ListGroup>  
                 </>       
             )
         }
     )
-
-    if (total !== 0) {
+    
         return (
             <>
-            <div className="col-lg-12 col-md-12 col-sm-12">
-            {listItems}
-            <Card body className="display-4">Total: {total}</Card>
-            <div>
-                <button className='btn btn-info' onClick={()=> deleteAll()}>Vaciar carrito</button>
-            </div> 
-            </div>
-            <div>        
-            <button className='btn btn-info' onClick={() =>volver('/productos')}>Volver a Productos</button>
-            </div>
+            {total !== 0 ? (
+                <div className="col-lg-12 col-md-12 col-sm-12">
+                    {listItems}
+                    <Card body className="display-4">Total: {total}
+                    <button className='btn btn-info' onClick={deleteAll}>Vaciar carrito</button>
+                    <button className='btn btn-info' onClick={() =>volver('/productos')}>Volver a Productos</button>
+                    </Card>
+                </div>
+            ) : (
+                <div className="col-lg-12 col-md-12 col-sm-12">
+                    <h2>No hay productos en el carrito.</h2>
+                    <button className='btn btn-info' onClick={() =>volver('/productos')}>Volver a Productos</button>
+                </div>
+            )}
             </>
         )
-    }else {
-        return (
-        <>
-        <div className="col-lg-12 col-md-12 col-sm-12">
-            <Card body className="display-4">No hay productos en el carrito</Card>
-        </div> 
-        <div>  
-            <button className='btn btn-info' onClick={() =>volver('/productos')}>Volver a Productos</button>
-        </div>
-        </>
-        )
-        
-    }
-
 }
