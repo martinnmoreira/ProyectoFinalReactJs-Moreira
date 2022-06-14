@@ -21,6 +21,7 @@ const CartProvider = ({children}) => {
         setCart([...cart, {...productDetail, quantity: +count}])
         }
     }
+    //prueba
     // removeFromCart
     const removeFromCart = (id) => {
         //Replicar logica de addToCart pero invertida 
