@@ -21,7 +21,6 @@ const CartProvider = ({children}) => {
         setCart([...cart, {...productDetail, quantity: +count}])
         }
     }
-    //prueba
     // removeFromCart
     const removeFromCart = (id) => {
         //Replicar logica de addToCart pero invertida 
@@ -30,16 +29,6 @@ const CartProvider = ({children}) => {
         //SI LA CANTIDAD ES IGUAL A 1 HACE ESTO
         const newCart = cart.filter((carItem) => carItem.id !== id);
         setCart(newCart)
-
-        // SINO
-
-    /*  const newCart = cart.map((cartItem) => {
-        if (cartItem.id === item.id) {
-            cartItem.quantity--;
-        }
-        return cartItem;
-        });
-        setCart(newCart); */
         
     }
     // deleteAll
@@ -50,8 +39,6 @@ const CartProvider = ({children}) => {
     const isInCart = (id) => {
         return cart.find(productDetail => productDetail.id === id)
     }
-
-
 
   return (
       <Provider value={{
