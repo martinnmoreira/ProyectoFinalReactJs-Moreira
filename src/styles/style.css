@@ -19,9 +19,9 @@ br { clear:left }
     padding: 2px;
 }
  
-.menu div a:visited {
+/* .menu div a:visited {
     color: rgb(0, 0, 0);
-}
+} */
  
 .menu div a:hover, .menu_simple ul li .current {
     color: rgb(0, 0, 0);
@@ -101,7 +101,7 @@ br { clear:left }
     justify-content: center;
     align-content: center;
     align-items: center;
-    color: red;
+    color: #D7F200;
     /* background-color: red; */
     border-radius: 300px;
 }
@@ -124,7 +124,7 @@ br { clear:left }
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
-    color: red;
+    color: #D7F200 !important;
 }
 
 /* FOOTER */
