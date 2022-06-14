@@ -21,16 +21,14 @@ export default function Cart() {
                 <ListGroup as="ul">
                     <ListGroup.Item as="li" className="d-flex justify-content-between align-items-start">
                         <div className="ms-2 me-auto">
-                        <div className="fw-bold">{element.title}</div>
-                        Precio {element.price}<br />
-                        <h6>Subtotal: {subtotal}</h6>
-                        {/* <button className='btn btn-danger'>BOTON PARA REMOVER ITEM</button>  */}
-                        
+                            <div className="fw-bold">{element.title}</div>
+                            Precio {element.price}<br />
+                            <h6>Subtotal: {subtotal}</h6>
                         </div>
                         <Badge bg="primary" pill>
                             Cantidad: {element.quantity}
                         </Badge>
-                        <FiTrash2 className="trashIcon" onClick={()=> removeFromCart(element.id)}/>                      
+                        <FiTrash2 className="trashIcon" onClick={()=> removeFromCart(element.id)}/>               
                     </ListGroup.Item> 
                 </ListGroup>  
                 </>       
@@ -43,9 +41,10 @@ export default function Cart() {
             {total !== 0 ? (
                 <div className="col-lg-12 col-md-12 col-sm-12">
                     {listItems}
-                    <Card body className="display-4">Total: {total}
-                    <button className='btn btn-info' onClick={deleteAll}>Vaciar carrito</button>
-                    <button className='btn btn-info' onClick={() =>volver('/productos')}>Volver a Productos</button>
+                    <Card body className="display-4">Total: {total}     
+                        <button className='btn btn-success' onClick={() =>volver('/Finalizar')}>Terminar compra</button>
+                        <button className='btn btn-info' onClick={deleteAll}>Vaciar carrito</button>
+                        <button className='btn btn-info' onClick={() =>volver('/productos')}>Volver a Productos</button>
                     </Card>
                 </div>
             ) : (

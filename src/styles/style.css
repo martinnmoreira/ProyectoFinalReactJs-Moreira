@@ -1,7 +1,8 @@
+br { clear:left }
 
-.menu{
-    background-color: #f5f5f5;
-    font-family: 'Staatliches';
+.menu {
+    background-color: black;
+    font-family: 'Staatliches', cursive;
     font-size: 24px;
     justify-content: flex-start;
     align-content: center;
@@ -14,7 +15,7 @@
 
 .menu div a {
     text-decoration: none;
-    color: #125B50; 
+    color: grey; 
     padding: 2px;
 }
  
@@ -22,15 +23,8 @@
     color: rgb(0, 0, 0);
 }
  
-.menu div a:hover, .menu ul li .current {
+.menu div a:hover, .menu_simple ul li .current {
     color: rgb(0, 0, 0);
-    background-color: #125B50;
-}
-
-.logotipo { 
-    width: 100px;
-    height: 100px;
-
 }
 
 .links {
@@ -77,8 +71,9 @@
 
 }
 
-.btn {
+.btnVerde {
     margin: 10px;
+    background-color: #8DD504 !important;
 }
 
 .tarjetasLapiceras {
@@ -130,4 +125,44 @@
     flex-wrap: wrap;
     justify-content: end;
     color: red;
+}
+
+/* FOOTER */
+/* CSS FOOTER CON BOOTSTRAP */
+.bgBlack {
+    background-color: black; 
+}
+
+.clBlanco {
+    color: #fbfbfb !important; 
+}
+
+.linksFooter {
+    list-style: none;
+    padding-left: 0; 
+}
+
+.btn {
+    border-color: #fbfbfb; 
+}
+.btn a {
+        text-decoration: none;
+        color: #fbfbfb; 
+}
+
+.redesFooter {
+    color: #fbfbfb;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 1rem; 
+}
+
+.marginTarjetasMovil {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 0px; 
+}
+    
+.marginTarjetasMovil p {
+    color: #fbfbfb; 
 }
