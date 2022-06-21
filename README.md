@@ -39,16 +39,23 @@ En la misma carpeta ejecutar en consola: `npm start`
 
 ## Librerías y Hooks
 
-React-router-dom para navegacion. -- https://www.npmjs.com/package/react-router-dom
+React-router-dom para navegacion:  https://www.npmjs.com/package/react-router-dom
+
 react-bootstrap para menú de navegación y cards: https://react-bootstrap.github.io/
+
 FontAwesome para íconos de redes sociales: https://fontawesome.com/v5/docs/web/use-with/react
+
 React-icons para ícono de corrito: https://react-icons.github.io/react-icons/icons?name=fi
 
 
 Utilicé hooks de:
+
 useState
+
 useEffect
+
 useParams
+
 useContext
 
 También utilicé BrowserRouter y Routes junto con Links y Nav.Links para el routing.
