@@ -104,6 +104,10 @@ br { clear:left }
     padding: 30px;
 }
 
+.carousel-control-next-icon{
+    color: black !important;
+}
+
 .card-title{
     text-align: center;
 }
@@ -359,6 +363,7 @@ br { clear:left }
 }
 
 .linksFooter {
+    text-align: center;
     list-style: none;
     padding-left: 0; 
 }
@@ -374,9 +379,7 @@ br { clear:left }
 .redesFooter {
     color: #fbfbfb;
     font-size: 1.8rem;
-    font-weight: bold;
-    padding: 1rem;
-     
+    font-weight: bold;     
 }
 
 .redesFooter a{

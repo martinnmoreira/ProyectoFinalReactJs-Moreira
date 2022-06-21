@@ -15,7 +15,7 @@ export default function Footer() {
         <footer className="container-fluid bgBlack clBlanco">
             <div className="container-fluid py-5">
                 <div className="row w-100 d-flex justify-content-around">
-                    <div className="col-12 col-lg-3">
+                    <div className="col-12 col-lg-3 linksFooter">
                         <h2 className="redesFooter">Contacto</h2>
                         <p>Tel. (54-11) 41234-5678/5679</p>
                         <p>administracion@todolibreria.com.ar</p>
