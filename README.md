@@ -29,7 +29,7 @@ Terminada la compra nos da la opcíon de Continuar, donde se nos lleva al inicio
 ## Instalación
 
 ### Paso 1 - Clonar el proyecto
-Desde el Git Bash ejecutar sobre el directorio donde se desee clonar el proyecto: `git clone https://github.com/sparadeloweb/tiendareact.git`
+Desde el Git Bash ejecutar sobre el directorio donde se desee clonar el proyecto: `git clone https://github.com/martinnmoreira/ProyectoFinalReactJs-Moreira`
 
 ### Paso 2 - Instalar dependencias
 Ubicado en la carpeta del proyecto, ejecutar en consola: `npm install`
