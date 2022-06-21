@@ -13,10 +13,8 @@ export default function ItemDetailContainer() {
         const db = getFirestore()
         const productRef = doc(db, "productos", productId)
         getDoc(productRef).then((snapshot) => {
-            console.log(snapshot)
             if(snapshot.exists){
                 setProductDetail({id: snapshot.id, ...snapshot.data()})
-                console.log(productDetail)
                 setLoading(false)
             }
         }

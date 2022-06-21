@@ -1,70 +1,43 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TodoLibería
 
-## Available Scripts
+Proyecto realizado en ReactJs y conectado a Firebase. 
+Trata sobre la venta de artículos de librería.
+Todos los productos se encuentran alojados en Firestore y las ordenes generadas se guardan ahí.
+El sitio consta de secciones, tales como Inicio, Nosotros, Productos (donde se pueden filtrar los productos segun categoría).
 
-In the project directory, you can run:
+## Link de Vercel
 
-### `npm start`
+[Ver tienda](https://proyecto-final-react-js-moreira.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Funcionamiento
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Al clickear sobre Ver Más de un producto en particular nos enviara al detalle del mismo donde es posible seleccionar la cantidad deseada y sumar esta última al carrito.
 
-### `npm test`
+Luego puede acceder al carrito tanto con el botón ir al carrito como presionando el carrito que aparecerá en la esquina superior derecha.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Una vez allí podra ver los productos agregados, la cantidad, el subtotal, el total de la compra y la posibilidad de borrar algún producto del carrito.
 
-### `npm run build`
+Una vez seleccionada la opción de Terminar compra, nos llevará a un formulario de carga de datos y una vez cargados estos y enviados nos mostrará una card con un ID y algunos datos indicandonos que se finalizó la compra con éxito. Cabe resaltar que la orden se guarda en Firestore.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Terminada la compra nos da la opcíon de Continuar, donde se nos lleva al inicio y todo comienza de nuevo.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Gif de proceso de compra y funcionamiento de página
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![](todolibreria.gif)
 
-### `npm run eject`
+## Librerías y Hooks
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React-router-dom para navegacion. -- https://www.npmjs.com/package/react-router-dom
+react-bootstrap para menú de navegación y cards: https://react-bootstrap.github.io/
+FontAwesome para íconos de redes sociales: https://fontawesome.com/v5/docs/web/use-with/react
+React-icons para ícono de corrito: https://react-icons.github.io/react-icons/icons?name=fi
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Utilicé hooks de:
+useState
+useEffect
+useParams
+useContext
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+También utilicé BrowserRouter y Routes junto con Links y Nav.Links para el routing.

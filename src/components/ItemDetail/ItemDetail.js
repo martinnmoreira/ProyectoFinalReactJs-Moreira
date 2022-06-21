@@ -2,13 +2,10 @@ import React from 'react'
 import {useNavigate, Link} from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount';
 import { CartContext } from "../../Context/CartContext";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
-
 
 export default function ItemDetail({productDetail}) {
   const {id, title, description, image, stock, price} = productDetail
   const volver = useNavigate()
-  // console.table(productDetail)
   // Definimos variables del context
   const { addToCart, isInCart } = React.useContext(CartContext);
   // Separamos el estado del count
@@ -34,18 +31,24 @@ export default function ItemDetail({productDetail}) {
                         <small>Stock disponible: {stock} unidades</small>
                         </h5>
                         <hr />
-                        {isInCart(id) ? (
-                              <Link to='/Cart'><button className="btn btn-warning btn-dark">Ir al carrito</button></Link>
-                            ) : (
-                              <div>
-                                  <ItemCount 
-                                      onSubmit={()=> addToCart(productDetail, count)}
-                                      count={count}
-                                      setCount={setCount}
-                                      stock={stock}
-                                  />
-                              </div>
-                            )}
+                        {
+                          isInCart(id) ? (
+                              <Link to='/Cart'><button className="btn btn-warning">Ir al carrito</button></Link>
+                          ) : (stock === 0) ? (
+                              <h3 className="mt-3">
+                                  Lamentablemente no hay stock disponible. Disculpe las molestias ocasionadas.
+                              </h3>
+                          ) : (                            
+                                <div>
+                                <ItemCount 
+                                    onSubmit={()=> addToCart(productDetail, count)}
+                                    count={count}
+                                    setCount={setCount}
+                                    stock={stock}
+                                />
+                                </div>
+                          )
+                        }
                         <hr />
                         <button className='btn btn-dark' onClick={() =>volver('/productos')}>Volver a Productos</button>
                     </div>
