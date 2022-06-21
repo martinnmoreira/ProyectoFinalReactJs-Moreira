@@ -33,7 +33,7 @@ export default function ItemDetail({productDetail}) {
                         <hr />
                         {
                           isInCart(id) ? (
-                              <Link to='/Cart'><button className="btn btn-warning">Ir al carrito</button></Link>
+                              <Link to='/Cart'><button className="btn btnVerde">Ir al carrito</button></Link>
                           ) : (stock === 0) ? (
                               <h3 className="mt-3">
                                   Lamentablemente no hay stock disponible. Disculpe las molestias ocasionadas.
