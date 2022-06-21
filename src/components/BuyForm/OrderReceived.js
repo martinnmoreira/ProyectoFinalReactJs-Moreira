@@ -1,8 +1,8 @@
-import Order from "./Order.css"
+import "./Order.css"
 import React from 'react'
 import { useContext } from "react"
 import { CartContext } from "../../Context/CartContext"
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"
 import { Col, Container, Row } from 'react-bootstrap';
 
 export const OrderReceived = ({orderId}, {data}) => {
@@ -49,17 +49,6 @@ export const OrderReceived = ({orderId}, {data}) => {
                         <div className="col-3"><big>Total de tu compra: ${total}</big></div>
                     </div>
                 </div>
-                <div class="progress-track-order">
-                    <div class="title">Estado del pedido</div>
-                </div>
-                <div className="progress-track-order">
-                    <ul id="progressbar">
-                        <li className="step0 active " id="step1">Aceptado</li>
-                        <li className="step0 text-center" id="step2">Enviado</li>
-                        <li className="step0 text-right" id="step3">En camino</li>
-                        <li className="step0 text-right" id="step4">Recibido</li>
-                    </ul>
-                </div>
 
                 <div class="total-order">
                     <div class="row">
@@ -67,7 +56,7 @@ export const OrderReceived = ({orderId}, {data}) => {
                     <Row>
                         <Col>
                             <div className="d-grid gap-2">
-                            <button className='btn card-shadow btnVerde' onClick={Continuar}>Continuar</button>
+                            <button className='btn card-shadow btnNegro' onClick={Continuar}>Continuar</button>
                             </div> 
                         </Col>
                     </Row>
@@ -78,7 +67,7 @@ export const OrderReceived = ({orderId}, {data}) => {
                 <div className="footer-order">
                     <div className="row">
                         <div className="col-10">
-                            Necesitás ayuda? Contactános
+                            Necesitás ayuda?<Link to='/contacto' class="nav-link colorGreen">Contactános</Link>
                         </div>
                     </div>
                 </div>

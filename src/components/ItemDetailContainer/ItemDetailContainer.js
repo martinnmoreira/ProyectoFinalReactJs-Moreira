@@ -21,6 +21,7 @@ export default function ItemDetailContainer() {
             }
         }
         )
+        // eslint-disable-next-line
     },[productId])   
 
     return (

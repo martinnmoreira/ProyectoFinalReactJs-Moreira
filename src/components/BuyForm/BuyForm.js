@@ -10,7 +10,7 @@ import { OrderReceived } from './OrderReceived';
 
 export default function OrderForm() {
 
-    const { cart, deleteAll } = useContext(CartContext)
+    const { cart } = useContext(CartContext)
     const [data, setData] = useState();
     const [orderId, setOrderId] = useState();
     
@@ -53,70 +53,70 @@ export default function OrderForm() {
             {orderId ?  
                     <OrderReceived orderId={orderId} data={data} />
             : 
-            <Container fluid="md" className="orderForm">
-            <Row>
-            <Form>
-            <Form.Group className="mb-3" controlId="formBasicName">
-                <Form.Label>Nombre y apellido</Form.Label>
-                <Form.Control 
-                    type="text"
-                    name="name"
-                    onChange={handleChange}
-                    placeholder="Ingresá tu nombre completo" />
-            </Form.Group>
+            <Container fluid="md" className="contactForm">
+                <Row>
+                    <Form>
+                        <Form.Group className="mb-3" controlId="formBasicName">
+                            <Form.Label>Nombre y apellido</Form.Label>
+                            <Form.Control 
+                                type="text"
+                                name="name"
+                                onChange={handleChange}
+                                placeholder="Ingresá tu nombre completo" />
+                        </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control 
-                    type="email"
-                    name="email"
-                    onChange={handleChange}
-                    placeholder="Enter email" />
-            </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control 
+                                type="email"
+                                name="email"
+                                onChange={handleChange}
+                                placeholder="Enter email" />
+                        </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicTel">
-                <Form.Label>Teléfono</Form.Label>
-                <Form.Control 
-                    type="phone" 
-                    name="phone"
-                    onChange={handleChange}
-                    placeholder="Tu teléfono móvil" />
-            </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicTel">
+                            <Form.Label>Teléfono</Form.Label>
+                            <Form.Control 
+                                type="phone" 
+                                name="phone"
+                                onChange={handleChange}
+                                placeholder="Tu teléfono móvil" />
+                        </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicAdress">
-                <Form.Label>Dirección</Form.Label>
-                <Form.Control 
-                    type="text" 
-                    name="address"
-                    onChange={handleChange}
-                    placeholder="Calle y número" />
-            </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicAdress">
+                            <Form.Label>Dirección</Form.Label>
+                            <Form.Control 
+                                type="text" 
+                                name="address"
+                                onChange={handleChange}
+                                placeholder="Calle y número" />
+                        </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicCity">
-                <Form.Label>Localidad</Form.Label>
-                <Form.Control 
-                    type="text" 
-                    name="city"
-                    onChange={handleChange}
-                    placeholder="Ingresá la ciudad" />
-            </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicCity">
+                            <Form.Label>Localidad</Form.Label>
+                            <Form.Control 
+                                type="text" 
+                                name="city"
+                                onChange={handleChange}
+                                placeholder="Ingresá la ciudad" />
+                        </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicProv">
-                <Form.Label>Provincia</Form.Label>
-                <Form.Control 
-                    type="text" 
-                    name="city"
-                    onChange={handleChange}
-                    placeholder="Ingresá la provincia" />
-            </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicProv">
+                            <Form.Label>Provincia</Form.Label>
+                            <Form.Control 
+                                type="text" 
+                                name="city"
+                                onChange={handleChange}
+                                placeholder="Ingresá la provincia" />
+                        </Form.Group>
 
-            <Button className='btnVerde'
-                type="submit"
-                onClick={handleSubmit}>
-                Finalizar compra
-            </Button>
-            </Form>
-            </Row>
+                        <Button className='btnVerde'
+                            type="submit"
+                            onClick={handleSubmit}>
+                            Finalizar compra
+                        </Button>
+                    </Form>
+                </Row>  
             </Container>
         }
             </div>

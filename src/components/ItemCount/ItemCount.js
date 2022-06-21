@@ -20,11 +20,11 @@ export default function AddButton({count, setCount, stock, onSubmit}) {
   
   /* ------------------------- Componente presentacion ------------------------ */
   const StockButton = ({ handleOnClick, text }) => {
-    return <Button className="stock-button" onClick={() => handleOnClick()}>{text}</Button>;
+    return <Button className="stock-button btn-dark btn-space" onClick={() => handleOnClick()}>{text}</Button>;
   };
   /* ------------------------- Componente presentacion ------------------------ */
   const AddButton = ({handleOnSubmit}) => {
-    return <Button className="btn add-button" onClick={() => handleOnSubmit()}>Añadir al carrito</Button>;
+    return <Button className="btn add-button btn-dark btn-space" onClick={() => handleOnSubmit()}>Añadir al carrito</Button>;
   };
 
   return (

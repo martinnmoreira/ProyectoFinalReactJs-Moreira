@@ -6,25 +6,57 @@ br { clear:left }
     font-size: 24px;
     justify-content: flex-start;
     align-content: center;
+    
+}
+
+.nav-link{
+    color: #fbfbfb !important;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    /* padding: 10px; */
+    /* margin: 10px; */
+    align-items: flex-start;
 }
 
 .menu div{
-    width: 100%;
-    padding: 2px;
+    /* width: 100%; */
+    /* padding: 2px; */
 }
 
 .menu div a {
     text-decoration: none;
     color: grey; 
-    padding: 2px;
+    /* padding: 2px; */
 }
  
 /* .menu div a:visited {
     color: rgb(0, 0, 0);
 } */
  
-.menu div a:hover, .menu_simple ul li .current {
+/* .menu div a:hover, .menu_simple ul li .current {
     color: rgb(0, 0, 0);
+} */
+
+.dropdown-menu{
+    padding: 0px !important;
+}
+.dropdown-item{
+    padding: 0px !important;
+}
+.submenu{
+    background-color: black;
+    color: #fbfbfb;
+    padding: 0px;
+}
+
+.menu div a:hover{
+    background-color: white;
+    color: black !important;
+}
+
+.fondoImg:hover{
+    background-color: black !important;
 }
 
 .links {
@@ -49,16 +81,41 @@ br { clear:left }
 }
 
 .card{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* CARROULEL */
+.slideImages{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 350px !important;
+    object-fit: contain;
+    align-self: center; 
+}
+
+.styleCarousel{
+    margin-bottom: 50px;
+    background-color: #a8a8a8;
+    padding: 30px;
+}
+
+.card-title{
+    text-align: center;
 }
 
 .cardsProductos {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+}
+
+.itemListMargin {
+    margin-bottom: 5px !important;
 }
 
 .cardProductoDetalle {
@@ -71,9 +128,17 @@ br { clear:left }
 
 }
 
+.todoCentrado{
+    text-align: center;
+    align-content: center;
+}
+
 .btnVerde {
+    width: 120px;
     margin: 10px;
-    background-color: #8DD504 !important;
+    background-color: #D7F200 !important;
+    border-color: #D7F200;
+    color: black !important;
 }
 
 .tarjetasLapiceras {
@@ -84,9 +149,10 @@ br { clear:left }
 }
 
 
-.card-imgs {
-    height: 380px;
-    
+.card-img {
+    height: 350px;
+    object-fit: contain;
+    align-self: center;
 }
 
 .cardLapiceras {
@@ -101,9 +167,18 @@ br { clear:left }
     justify-content: center;
     align-content: center;
     align-items: center;
-    color: #D7F200;
+    color: #fbfbfb;
     /* background-color: red; */
     border-radius: 300px;
+    margin-right: 10px;
+}
+
+.badgeCountIcon:hover{
+    color: #D7F200;
+}
+
+.navbar-dark .navbar-text a:hover {
+    color: #D7F200 !important;
 }
 
 .imageDetail {
@@ -116,6 +191,13 @@ br { clear:left }
     justify-content: center;
     align-content: center;
     align-items: center;
+    font-size: 16px;
+}
+
+.cartImgCart {
+    width: 70px;
+    object-fit: contain;
+    margin-right: 50px;
 }
 
 .trashIcon {
@@ -127,11 +209,150 @@ br { clear:left }
     color: #D7F200 !important;
 }
 
+#bg-primary{
+    background-color: black !important;
+}
+
+/*  */
+
+
+/* NOSOTROS */
+
+.nosotros{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Staatliches', cursive;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #D7F200;
+
+}
+
+.spinnerLoad{
+    margin: 150px;
+}
+
+/* ITEM DETAIL */
+
+.btn-space {
+    margin: 10px;
+}
+
+
+/* FORMULARIO DE CONTACTO */
+.contactForm {
+    width: 460px;
+    height: auto;
+    margin: 15px auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #fbfbfb;
+    padding-left: 30px; 
+}
+.contactForm form input {
+    background-color: #fbfbfb;
+    width: 408px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D7F200;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;; 
+}
+.contactForm form select {
+    background-color: #fbfbfb;
+    width: 385px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D7F200;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;;
+    color: #a8a8a8; 
+}
+.contactForm form textarea {
+    background-color: #fbfbfb;
+    width: 405px;
+    height: 150px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D7F200;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;;
+    padding-top: 1.5px; 
+}
+.contactForm form label {
+    display: block;
+    float: center; 
+}
+.contactForm form button {
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: black;
+    background-color: #D7F200;
+    border-color: #D7F200;
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer; 
+}
+.contactForm form span {
+    color: #D7F200; 
+}
+
+.aviso {
+    font-size: 130px;
+    color: #333333; 
+}
+
+.formulario h3 {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 30px;
+    color: #333333; 
+}
+
+.formulario div {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333; 
+}
+
+.formulario input:focus {
+    outline: 0;
+    border: 1px solid #97d848; 
+}
+
+.formulario textarea:focus {
+    outline: 0;
+    border: 1px solid #97d848; 
+}
+
+
 /* FOOTER */
 /* CSS FOOTER CON BOOTSTRAP */
-.bgBlack {
-    background-color: black; 
+
+.bgBlack{
+    background-color: black !important;
 }
+.textWhite{
+    color: white !important;
+}
+
 
 .clBlanco {
     color: #fbfbfb !important; 
@@ -154,7 +375,16 @@ br { clear:left }
     color: #fbfbfb;
     font-size: 1.8rem;
     font-weight: bold;
-    padding: 1rem; 
+    padding: 1rem;
+     
+}
+
+.redesFooter a{
+    color: #fbfbfb;
+}
+
+.redesFooter a:hover{
+    color: #D7F200;
 }
 
 .marginTarjetasMovil {
@@ -166,3 +396,9 @@ br { clear:left }
 .marginTarjetasMovil p {
     color: #fbfbfb; 
 }
+
+.derechos{
+    color: #fbfbfb;
+    text-align: center;
+}
+

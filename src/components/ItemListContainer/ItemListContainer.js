@@ -44,7 +44,7 @@ export default function ItemListContainer() {
     
     return (
             <div>
-                {loading ? <div className="spinnerLoad d-flex justify-content-center"> <Spinner animation="border" variant="warning" />Cargando</div> : <ItemList listaProductos={listaProductos}/>}
+                {loading ? <div className="spinnerLoad d-flex justify-content-center"><Spinner animation="border" variant="warning" />Cargando</div> : <ItemList listaProductos={listaProductos}/>}
             </div>
         );
   }

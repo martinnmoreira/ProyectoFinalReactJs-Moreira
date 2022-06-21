@@ -20,12 +20,15 @@ export default function Cart() {
                 <>
                 <ListGroup as="ul">
                     <ListGroup.Item as="li" className="d-flex justify-content-between align-items-start">
+                        <div className="d-flex justify-content-between align-items-center">
+                        <img src={element.image} className="cartImgCart" alt={element.title} />
+                        </div>
                         <div className="ms-2 me-auto">
                             <div className="fw-bold">{element.title}</div>
-                            Precio {element.price}<br />
-                            <h6>Subtotal: {subtotal}</h6>
+                            <div>Precio {element.price}</div><br />
+                            <div><h6>Subtotal: {subtotal}</h6></div>
                         </div>
-                        <Badge bg="primary" pill>
+                        <Badge bg="dark">
                             Cantidad: {element.quantity}
                         </Badge>
                         <FiTrash2 className="trashIcon" onClick={()=> removeFromCart(element.id)}/>               
@@ -42,15 +45,15 @@ export default function Cart() {
                 <div className="col-lg-12 col-md-12 col-sm-12">
                     {listItems}
                     <Card body className="display-4">Total: {total}     
-                        <button className='btn btn-success' onClick={() =>volver('/Finalizar')}>Terminar compra</button>
-                        <button className='btn btn-info' onClick={deleteAll}>Vaciar carrito</button>
-                        <button className='btn btn-info' onClick={() =>volver('/productos')}>Volver a Productos</button>
+                        <button className='btn btn-success btn-space bgBlack textWhite' onClick={() =>volver('/Finalizar')}>Terminar compra</button>
+                        <button className='btn btn-info btn-space bgBlack textWhite' onClick={deleteAll}>Vaciar carrito</button>
+                        <button className='btn btn-info btn-space bgBlack textWhite' onClick={() =>volver('/productos')}>Volver a Productos</button>
                     </Card>
                 </div>
             ) : (
                 <div className="col-lg-12 col-md-12 col-sm-12">
                     <h2>No hay productos en el carrito.</h2>
-                    <button className='btn btn-info' onClick={() =>volver('/productos')}>Volver a Productos</button>
+                    <button className='btn btn-info btn-space bgBlack textWhite' onClick={() =>volver('/productos')}>Volver a Productos</button>
                 </div>
             )}
             </>

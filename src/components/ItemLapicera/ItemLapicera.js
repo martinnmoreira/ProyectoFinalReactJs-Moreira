@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 const ItemLapicera = ({lapicera}) => {
     return(
         <div>
-            <Card className="cardLapiceras" style={{ width: '18rem' }}>
+            <Card className="cardLapiceras" style={{ width: '180px' }}>
             <Card.Img className="card-imgs" variant="top" src={lapicera.thumbnail} />
             <Card.Body>
                 <Card.Title>{lapicera.title}<hr></hr></Card.Title>  

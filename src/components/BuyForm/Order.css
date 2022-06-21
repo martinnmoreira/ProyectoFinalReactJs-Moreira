@@ -150,31 +150,12 @@
     top: 1px;
     z-index: 1;
 }
-.progress-track-order{
-    padding: 0 8%;
-}
-#progressbar li:nth-child(2):after {
-    margin-right: auto;
+
+.colorGreen{
+    color: #8DD504 !important;
 }
 
-#progressbar li:nth-child(1):after {
-    margin: auto;
-}
-
-#progressbar li:nth-child(3):after {
-    float: left;
-    width: 68%;
-}
-#progressbar li:nth-child(4):after {
-    margin-left: auto;
-    width: 132%;
-}
-
-#progressbar  li.active{
-    color: black;
-}
-
-#progressbar li.active:before,
-#progressbar li.active:after {
-    background: #8DD504;
+.btnNegro{
+    background-color: #000 !important;
+    color: #fff !important;
 }
